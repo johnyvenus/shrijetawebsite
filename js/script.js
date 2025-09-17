@@ -56,3 +56,23 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
   }
 });
+
+// Scroll Animations
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedSections = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  animatedSections.forEach(section => {
+    observer.observe(section);
+  });
+});

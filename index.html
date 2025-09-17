@@ -345,9 +345,82 @@
     .footer-links a:hover { color: white; }
     .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #4a5568; font-size: 0.9rem; }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  z-index: 101;
+}
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: all 0.3s;
+  position: absolute;
+}
+.mobile-menu-toggle span:nth-child(1) { top: 0; }
+.mobile-menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.mobile-menu-toggle span:nth-child(3) { bottom: 0; }
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
     /* 📱 RESPONSIVE */
     @media (max-width: 768px) {
-      .nav, .header-phone { display: none; }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .header-right {
+    display: none;
+    position: absolute;
+    top: 80px; /* Position below the header */
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+  }
+  .header-right.active {
+    display: flex;
+  }
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    order: 2; /* Menu comes after phone */
+  }
+  .nav a {
+    font-size: 1.5rem;
+  }
+  .header-phone {
+    margin: 0 0 2rem 0;
+    font-size: 1.2rem;
+    order: 1; /* Phone comes before menu */
+    display: flex;
+  }
       .hero { padding: 6rem 0 3rem; }
       .hero-cta-group { flex-direction: column; }
     }
@@ -368,18 +441,25 @@
   <header>
     <div class="container header-inner">
       <a href="/" class="logo">SHRIJETA GLOBAL</a>
-      <nav class="nav">
-        <a href="/machines">Machines</a>
-        <a href="/industries">Industries</a>
-        <a href="/about">About</a>
-        <a href="/service">Service</a>
-        <a href="/blogs">Blogs</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <a href="tel:+919891990887" class="header-phone">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.58.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
-        <span>+91-9891990887</span>
-      </a>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="/machines">Machines</a>
+          <a href="/industries">Industries</a>
+          <a href="/about">About</a>
+          <a href="/service">Service</a>
+          <a href="/blogs">Blogs</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <a href="tel:+919891990887" class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.58.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+          <span>+91-9891990887</span>
+        </a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -751,6 +831,15 @@
       } else {
         header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
       }
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const headerRight = document.querySelector('.header-right');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      headerRight.classList.toggle('active');
     });
   </script>
 </body>

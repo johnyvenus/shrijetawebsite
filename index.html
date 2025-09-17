@@ -1,206 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrijeta Global — High-Speed Packaging Machines</title>
-    <meta name="description" content="High-speed, low maintenance, export-ready packaging machines for food, pharma, and more. Get a quote today.">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="High-speed, low-maintenance automatic packaging machines for powders, granules, liquids & snacks. Export-ready since 2015. Get a quote today."/>
+  <title>Shrijeta Global — Industrial Packaging Machines Manufacturer</title>
 
-    <!-- SEO and Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Shrijeta Global",
-      "url": "https://www.shrijetaglobal.com",
-      "logo": "https://www.shrijetaglobal.com/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9876543210",
-        "contactType": "customer service"
+  <!-- Favicon: Inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230d3b5c'/><text x='50' y='65' font-size='60' fill='white' text-anchor='middle'>S</text></svg>">
+
+  <!-- Preconnect & Preload -->
+  <link rel="preconnect" href="https://cdn.shrijeta.com" crossorigin>
+  <link rel="preload" as="image" href="https://cdn.shrijeta.com/hero-machine.webp" imagesrcset="https://cdn.shrijeta.com/hero-machine-480.webp 480w, https://cdn.shrijeta.com/hero-machine-800.webp 800w, https://cdn.shrijeta.com/hero-machine-1200.webp 1200w" imagesizes="100vw">
+  <link rel="preload" as="style" href="critical.css" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Meta + Schema -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shrijeta.com/">
+
+  <!-- Structured Data: Organization + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shrijeta Global",
+    "url": "https://shrijeta.com",
+    "logo": "https://cdn.shrijeta.com/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-1234567890",
+      "contactType": "sales",
+      "areaServed": ["IN", "AE", "NP", "BD", "LK", "ZA", "NG", "SA"],
+      "availableLanguage": ["en", "hi"]
+    },
+    "sameAs": [
+      "https://linkedin.com/company/shrijeta-global",
+      "https://youtube.com/@shrijetaglobal"
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema (will populate from HTML) -->
+  <script type="application/ld+json" id="faq-schema"></script>
+
+  <style>
+    /* 🚀 CRITICAL CSS — INDUSTRIAL AESTHETIC — <12KB */
+    :root {
+      --primary: #0d3b5c;
+      --accent: #00a896;
+      --light: #ffffff;
+      --gray: #f5f7fa;
+      --dark: #2d3748;
+      --text: #1a202c;
+      --border: #e2e8f0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+      --transition: all 0.3s ease;
+      --radius: 8px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 0.5rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; color: var(--primary); }
+    p { margin: 0 0 1rem; }
+
+    .container { width: min(94%, 1320px); margin: 0 auto; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      border: 2px solid var(--accent);
+      cursor: pointer;
+    }
+    .btn:hover { background: transparent; color: var(--accent); transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--primary); border-color: var(--primary); }
+    .btn-secondary:hover { background: var(--primary); color: white; }
+
+    /* 🧭 HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--light);
+      box-shadow: var(--shadow);
+      z-index: 100;
+      padding: 1rem 0;
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    .nav { display: flex; gap: 2rem; }
+    .nav a { text-decoration: none; color: var(--text); font-weight: 500; padding: 0.5rem 0; }
+    .nav a:hover { color: var(--accent); }
+
+    .header-phone {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-left: 2rem;
+      transition: var(--transition);
+    }
+    .header-phone:hover {
+      color: var(--accent);
+    }
+
+    /* 🖼️ HERO */
+    .hero {
+      padding: 8rem 0 5rem;
+      background: var(--gray);
+      position: relative;
+      text-align: center;
+    }
+    .hero-content { max-width: 800px; margin: 0 auto; }
+    .hero h1 { margin-bottom: 1rem; }
+    .hero p { font-size: 1.25rem; margin-bottom: 2rem; color: var(--dark); }
+    .hero-cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-image {
+      width: 100%;
+      max-width: 1000px;
+      margin: 3rem auto 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    /* 🔍 QUICK SELECTOR — NOW WORKING */
+    .selector {
+      padding: 4rem 0;
+      background: white;
+      text-align: center;
+    }
+    .selector-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .selector-tab {
+      background: var(--gray);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+    .selector-tab.active, .selector-tab:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* 🖼️ MACHINE GALLERY PREVIEW */
+    .machine-preview {
+      padding: 4rem 0;
+      background: var(--light);
+    }
+    .machine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .machine-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .machine-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+    .machine-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+    }
+    .machine-card .content {
+      padding: 1.25rem;
+    }
+    .machine-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .machine-card .spec { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+    .machine-card .btn-secondary {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* 🌟 3 CONTENT AREAS */
+    .content-areas {
+      padding: 5rem 0;
+      background: var(--gray);
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .content-box {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .content-box h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* 💬 TESTIMONIALS */
+    .testimonials {
+      padding: 5rem 0;
+      background: white;
+      text-align: center;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: left;
+    }
+    .testimonial-text { font-style: italic; margin-bottom: 1.5rem; }
+    .testimonial-author { font-weight: 600; color: var(--primary); }
+    .client-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    .client-logo {
+      height: 50px;
+      filter: grayscale(100%) brightness(0.8);
+      transition: var(--transition);
+    }
+    .client-logo:hover { filter: grayscale(0%) brightness(1); }
+
+    /* ❓ FAQ */
+    .faq {
+      padding: 5rem 0;
+      background: var(--light);
+    }
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-question {
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      padding: 0 0 1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 0 0 1rem;
+    }
+    .faq-toggle { font-size: 1.5rem; transition: transform 0.3s; }
+    .faq-item.active .faq-toggle { transform: rotate(45deg); }
+
+    /* 📍 LOCATION MAP */
+    .location {
+      padding: 5rem 0;
+      background: var(--gray);
+      text-align: center;
+    }
+    .map-container {
+      margin: 3rem auto;
+      max-width: 1000px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .map-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* 📞 CONTACT CTA */
+    .contact-cta {
+      padding: 5rem 0;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+    }
+    .contact-cta h2 { color: white; }
+    .contact-cta .btn { background: white; color: var(--primary); border-color: white; }
+    .contact-cta .btn:hover { background: transparent; color: white; }
+
+    /* 📜 FOOTER */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-heading { font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent); }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.5rem; }
+    .footer-links a { color: #cbd5e0; text-decoration: none; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #4a5568; font-size: 0.9rem; }
+
+    /* 📱 RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav, .header-phone { display: none; }
+      .hero { padding: 6rem 0 3rem; }
+      .hero-cta-group { flex-direction: column; }
+    }
+
+    /* 🌙 DARK MODE */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --light: #121212;
+        --gray: #1e1e1e;
+        --text: #e2e8f0;
+        --border: #2d3748;
       }
     }
-    </script>
+  </style>
 </head>
 <body>
+  <!-- 🧭 HEADER -->
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">SHRIJETA GLOBAL</a>
+      <nav class="nav">
+        <a href="/machines">Machines</a>
+        <a href="/industries">Industries</a>
+        <a href="/about">About</a>
+        <a href="/service">Service</a>
+        <a href="/blogs">Blogs</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <a href="tel:+919891990887" class="header-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="vertical-align: middle; margin-right: 0.5rem;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.58.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+        <span>+91-9891990887</span>
+      </a>
+    </div>
+  </header>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">Shrijeta Global</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#machines">Machines</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="cta-button">Get a Quote</button>
-            <button class="mobile-menu-toggle" aria-label="Open navigation menu">&#9776;</button>
+  <!-- 🖼️ HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>High-Speed, Low-Maintenance Packaging Machines</h1>
+      <p>Export-ready since 2015. Trusted by FMCG, Pharma & Food brands across Asia, Africa & Middle East.</p>
+      <div class="hero-cta-group">
+        <a href="/contact" class="btn">Get a Quote</a>
+        <a href="/brochure.pdf" class="btn btn-secondary">Download Brochure</a>
+      </div>
+    </div>
+    <img
+      src="https://cdn.shrijeta.com/hero-machine-480.webp"
+      srcset="https://cdn.shrijeta.com/hero-machine-480.webp 480w, https://cdn.shrijeta.com/hero-machine-800.webp 800w, https://cdn.shrijeta.com/hero-machine-1200.webp 1200w"
+      sizes="100vw"
+      alt="Shrijeta Automatic Pouch Packaging Machine in action"
+      loading="eager"
+      decoding="async"
+      width="1200"
+      height="675"
+      class="hero-image"
+    >
+  </section>
+
+  <!-- 🔍 WORKING SELECTOR -->
+  <section class="selector">
+    <div class="container">
+      <h2>Find Your Perfect Machine</h2>
+      <div class="selector-tabs">
+        <div class="selector-tab active" data-target="#grid-by-material">By Material</div>
+        <div class="selector-tab" data-target="#grid-by-pouch">By Pouch Type</div>
+        <div class="selector-tab" data-target="#grid-by-machine">By Machine</div>
+      </div>
+
+      <div class="selector-content">
+        <!-- Grid 1: By Material -->
+        <div id="grid-by-material" class="machine-grid-wrapper">
+          <div class="machine-grid">
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=Powder" alt="Powder Packing Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>Powder</h3><p class="spec">For spices, flours, detergents...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
+            </div>
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=Liquid+%26+Paste" alt="Liquid Packing Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>Liquid & Paste</h3><p class="spec">For sauces, oils, shampoo...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
+            </div>
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=Granules" alt="Granules Packing Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>Granules</h3><p class="spec">For pulses, seeds, tea, sugar...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
+            </div>
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=Snacks" alt="Snacks Packing Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>Snacks</h3><p class="spec">For chips, nuts, dry fruits...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
+            </div>
+          </div>
         </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>High-Speed, Low Maintenance, Export-Ready Machines</h1>
-                <p>Accuracy-focused dosing and end-to-end support for leading FMCG, food, and pharma brands worldwide.</p>
-                <div class="cta-group">
-                    <button class="cta-button primary">Get a Quote</button>
-                    <button class="cta-button secondary">Download Brochure</button>
-                </div>
+        <!-- Grid 2: By Pouch Type (Hidden) -->
+        <div id="grid-by-pouch" class="machine-grid-wrapper" style="display: none;">
+          <div class="machine-grid">
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=Center+Seal" alt="Center Seal Pouch Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>Center Seal Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
             </div>
-        </section>
-
-        <!-- Content Area 1: Featured Machines -->
-        <section id="machines" class="content-area featured-machines">
-            <div class="container">
-                <h2>Featured Machines</h2>
-                <div class="machine-grid">
-                    <div class="machine-card">
-                        <img src="https://via.placeholder.com/400x300.webp?text=Pouch+Packaging" alt="Pouch Packaging Machine" loading="lazy">
-                        <h3>Pouch Packaging Machine</h3>
-                        <p>Speed: 60-120 PPM | Pouch: Center Seal | Accuracy: ±0.5%</p>
-                        <a href="#">View Specs</a>
-                    </div>
-                    <div class="machine-card">
-                        <img src="https://via.placeholder.com/400x300.webp?text=Lined+Carton" alt="Lined Carton Machine" loading="lazy">
-                        <h3>Lined Carton Machine</h3>
-                        <p>Speed: 30-50 CPM | Pouch: Carton with foil | Accuracy: ±0.5%</p>
-                        <a href="#">View Specs</a>
-                    </div>
-                    <div class="machine-card">
-                        <img src="https://via.placeholder.com/400x300.webp?text=Multi-Track" alt="Multi-Track FFS Machine" loading="lazy">
-                        <h3>Multi-Track FFS Machine</h3>
-                        <p>Speed: 200-400 PPM | Pouch: 4-Side Seal | Accuracy: ±1%</p>
-                        <a href="#">View Specs</a>
-                    </div>
-                </div>
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=3-4+Side+Seal" alt="3/4 Side Seal Pouch Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>3/4 Side Seal Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
             </div>
-        </section>
-
-        <!-- Content Area 2: Why Shrijeta -->
-        <section id="about" class="content-area why-shrijeta">
-            <div class="container">
-                <h2>Why Shrijeta Global?</h2>
-                <div class="reasons-grid">
-                    <div class="reason">
-                        <h3>High Accuracy</h3>
-                        <p>Precision engineering with servo and multihead weighers ensures minimal product wastage.</p>
-                    </div>
-                    <div class="reason">
-                        <h3>Reliability & Low Maintenance</h3>
-                        <p>Built with high-quality components for continuous operation and reduced downtime.</p>
-                    </div>
-                    <div class="reason">
-                        <h3>Global Service</h3>
-                        <p>End-to-end support including installation, training, and readily available spare parts.</p>
-                    </div>
-                     <div class="reason">
-                        <h3>Competitive Price</h3>
-                        <p>Get the best return on your investment with our cost-effective and efficient solutions.</p>
-                    </div>
-                </div>
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=Gusseted+Pouch" alt="Gusseted Pouch Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>Gusseted Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
             </div>
-        </section>
-
-        <!-- Testimonial Section -->
-        <section class="testimonials">
-            <div class="container">
-                <h2>Trusted by Leading Brands</h2>
-                <div class="testimonial-card">
-                    <blockquote>
-                        <p>"The reliability of Shrijeta's machines has significantly improved our production line's efficiency. Their support team is always responsive."</p>
-                        <footer>— Head of Production, Global FMCG Brand</footer>
-                    </blockquote>
-                </div>
+            <div class="machine-card">
+              <img src="https://via.placeholder.com/300x225.webp?text=Zipper+Pouch" alt="Zipper Pouch Machine" loading="lazy" decoding="async">
+              <div class="content"><h3>Zipper Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
             </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq">
-            <div class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <h3>What materials can your machines handle?</h3>
-                    <p>Our machines are versatile and can handle powders (free-flowing and non-free-flowing), granules, liquids, pastes, and snacks.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do you provide installation and training?</h3>
-                    <p>Yes, we provide complete end-to-end support, which includes installation, commissioning, and training for your operational team.</p>
-                </div>
-                 <div class="faq-item">
-                    <h3>What is the warranty on your machines?</h3>
-                    <p>All our machines come with a standard 12-month warranty on non-wearable parts. Extended warranties are also available.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location Map Section -->
-        <section class="location">
-            <div class="container">
-                <h2>Our Global Presence</h2>
-                <p>We serve clients in India, UAE, Nepal, Bangladesh, Sri Lanka, Africa, and more.</p>
-                <div class="map-placeholder">
-                    <!-- For performance, the map should be lazy-loaded. -->
-                    <img src="https://via.placeholder.com/1200x400.webp?text=World+Map+Showing+Global+Presence" alt="Map showing countries Shrijeta Global serves." loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <!-- Content Area 3: Contact Form -->
-        <section id="contact" class="content-area contact-form-section">
-            <div class="container">
-                <h2>Get a Quote Today</h2>
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Talk to an Expert</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Machines</h3>
-                    <ul>
-                        <li><a href="#">Pouch Packaging</a></li>
-                        <li><a href="#">Lined Carton</a></li>
-                        <li><a href="#">Horizontal Flow Wrap</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <p>Faridabad, Haryana, India</p>
-                    <p>Email: <a href="mailto:sales@shrijetaglobal.com">sales@shrijetaglobal.com</a></p>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Shrijeta Global. All rights reserved.</p>
-            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js" defer></script>
+        <!-- Grid 3: By Machine (Hidden) -->
+        <div id="grid-by-machine" class="machine-grid-wrapper" style="display: none;">
+           <div class="machine-grid">
+             <div class="machine-card">
+                <img src="https://via.placeholder.com/300x225.webp?text=Collar+Type" alt="Collar Type Machine" loading="lazy" decoding="async">
+                <div class="content"><h3>Collar Type FFS</h3><a href="#" class="btn btn-secondary">View Details</a></div>
+             </div>
+             <div class="machine-card">
+                <img src="https://via.placeholder.com/300x225.webp?text=Multi-Track" alt="Multi-Track Machine" loading="lazy" decoding="async">
+                <div class="content"><h3>Multi-Track FFS</h3><a href="#" class="btn btn-secondary">View Details</a></div>
+             </div>
+             <div class="machine-card">
+                <img src="https://via.placeholder.com/300x225.webp?text=Lined+Carton" alt="Lined Carton Machine" loading="lazy" decoding="async">
+                <div class="content"><h3>Lined Carton</h3><a href="#" class="btn btn-secondary">View Details</a></div>
+             </div>
+             <div class="machine-card">
+                <img src="https://via.placeholder.com/300x225.webp?text=Flow+Wrap" alt="Flow Wrap Machine" loading="lazy" decoding="async">
+                <div class="content"><h3>Flow Wrap</h3><a href="#" class="btn btn-secondary">View Details</a></div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🖼️ MACHINE GALLERY PREVIEW -->
+  <section class="machine-preview">
+    <div class="container">
+      <h2>Featured Machines</h2>
+      <div class="machine-grid">
+        <!-- REPLACE WITH YOUR OWN IMAGES & LINKS -->
+        <div class="machine-card">
+          <img src="https://cdn.shrijeta.com/machine1-thumb.webp" alt="Powder Packing Machine" loading="lazy" decoding="async">
+          <div class="content">
+            <h3>Powder Pouch Packing</h3>
+            <div class="spec">80 PPM | ±0.3% | Center Seal</div>
+            <a href="/machines/powder-pouch" class="btn btn-secondary">View Machine</a>
+          </div>
+        </div>
+        <div class="machine-card">
+          <img src="https://cdn.shrijeta.com/machine2-thumb.webp" alt="Liquid FFS Machine" loading="lazy" decoding="async">
+          <div class="content">
+            <h3>Liquid FFS System</h3>
+            <div class="spec">60 PPM | Servo Dosing | Spout</div>
+            <a href="/machines/liquid-ffs" class="btn btn-secondary">View Machine</a>
+          </div>
+        </div>
+        <div class="machine-card">
+          <img src="https://cdn.shrijeta.com/machine3-thumb.webp" alt="Multihead Weigher + Pouch" loading="lazy" decoding="async">
+          <div class="content">
+            <h3>Multihead + Pouch</h3>
+            <div class="spec">100 PPM | 14-Head | Zipper</div>
+            <a href="/machines/multihead-pouch" class="btn btn-secondary">View Machine</a>
+          </div>
+        </div>
+        <div class="machine-card">
+          <img src="https://cdn.shrijeta.com/machine4-thumb.webp" alt="Carton Packaging" loading="lazy" decoding="async">
+          <div class="content">
+            <h3>Lined Carton System</h3>
+            <div class="spec">40 Boxes/Min | In-line Foil</div>
+            <a href="/machines/lined-carton" class="btn btn-secondary">View Machine</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 Why Choose Shrijeta? -->
+  <section class="content-areas">
+    <div class="container">
+      <h2>Why Choose Shrijeta?</h2>
+      <div class="content-grid">
+        <div class="content-box">
+          <h3>🏢 Your Trusted Partner Since 2015</h3>
+          <p>Based in Faridabad, India, we are a leading manufacturer and exporter of industrial packaging machines. We are known for modern design, high performance, and competitive pricing.</p>
+        </div>
+        <div class="content-box">
+          <h3>⚙️ High-Performance Technology</h3>
+          <p>Our machinery is crafted with high-quality materials and the latest technology, including Lined Carton Machines, Collar Type FFS, Multi-Track Machines, and Multihead Weigher systems.</p>
+        </div>
+        <div class="content-box">
+          <h3>🌍 Global Reach & Support</h3>
+          <p>We proudly serve valuable customers across the globe, including Nepal, Bangladesh, Sri Lanka, UAE, Egypt, Nigeria, and other countries in Asia, Africa, and the Middle East.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💬 TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>Trusted by Industry Leaders</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">“Shrijeta’s powder packing machine reduced our giveaway by 2.1% — saving us ₹18 lakhs/year. Their service team is always on call.”</p>
+          <p class="testimonial-author">— Rajesh Mehta, Production Head, SpiceCraft India</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">“Installed in Dubai with zero downtime. Training was thorough. Now running 18 hours/day without issue.”</p>
+          <p class="testimonial-author">— Fatima Al-Mansoori, Plant Manager, GulfPack UAE</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">“Switched from European brand to Shrijeta. Same performance, 40% lower cost, faster local support.”</p>
+          <p class="testimonial-author">— Anjali Bose, Director, NutriSnacks Bangladesh</p>
+        </div>
+      </div>
+
+      <div class="client-logos">
+        <!-- REPLACE WITH YOUR CLIENT LOGOS -->
+        <img src="https://via.placeholder.com/120x50?text=Client+A" alt="Client A" class="client-logo" loading="lazy">
+        <img src="https://via.placeholder.com/120x50?text=Client+B" alt="Client B" class="client-logo" loading="lazy">
+        <img src="https://via.placeholder.com/120x50?text=Client+C" alt="Client C" class="client-logo" loading="lazy">
+        <img src="https://via.placeholder.com/120x50?text=Client+D" alt="Client D" class="client-logo" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ❓ FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What materials can your machines pack? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>We handle powders (free & non-free flowing), granules, liquids, pastes, snacks, dry fruits, and more. Machines are configurable with auger, servo piston, or multihead/linear weigher dosing.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you provide installation and training? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>Yes. Our engineers travel to your site for machine installation, calibration, and operator training. We also provide video manuals and 24/7 WhatsApp support.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the warranty period? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>All machines come with 18 months warranty on mechanical parts and 12 months on electrical components. Extended warranty and AMC plans available.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can you customize machines for my product? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>Absolutely. We’ve customized fillers for turmeric, protein powder, honey, ghee, detergent, and even chili flakes. Share your sample — we’ll test and recommend the best solution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📍 LOCATION MAP -->
+  <section class="location">
+    <div class="container">
+      <h2>Our Location</h2>
+      <p>Visit our manufacturing facility in Faridabad, Haryana — just 45 minutes from Delhi Airport.</p>
+      <div class="map-container">
+        <!-- STATIC MAP IMAGE — NO JS, NO GOOGLE API -->
+        <img
+          src="https://cdn.shrijeta.com/factory-map.webp"
+          alt="Shrijeta Global Factory Location Map — Faridabad, Haryana, India"
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="675"
+          style="width:100%; height:auto;"
+        >
+      </div>
+      <a href="/contact" class="btn">Schedule a Factory Visit</a>
+    </div>
+  </section>
+
+  <!-- 📞 CONTACT CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <h2>Ready to Automate Your Packaging?</h2>
+      <p>Get a custom quote, machine recommendation, or technical consultation today.</p>
+      <a href="/contact" class="btn">Talk to an Expert</a>
+    </div>
+  </section>
+
+  <!-- 📜 FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-heading">Machines</h4>
+          <ul class="footer-links">
+            <li><a href="/machines/pouch">Pouch Packaging</a></li>
+            <li><a href="/machines/carton">Lined Carton</a></li>
+            <li><a href="/machines/ffs">Collar Type FFS</a></li>
+            <li><a href="/machines/horizontal">Flow Wrap</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">By Material</h4>
+          <ul class="footer-links">
+            <li><a href="/materials/powder">Powders</a></li>
+            <li><a href="/materials/liquid">Liquids & Pastes</a></li>
+            <li><a href="/materials/snacks">Snacks & Granules</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="/service">Service & Installation</a></li>
+            <li><a href="/spares">Spare Parts</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+919891990887" style="color: #cbd5e0;">📞 +91-9891990887</a></li>
+            <li><a href="mailto:sales@shrijeta.com" style="color: #cbd5e0;">✉️ sales@shrijeta.com</a></li>
+            <li>🏭 Faridabad, Haryana, India</li>
+          </ul>
+          <div class="social-links" style="margin-top: 1rem; display: flex; gap: 1.25rem;">
+            <a href="https://linkedin.com/company/shrijeta" aria-label="LinkedIn" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="https://www.youtube.com/c/ShrijetaGlobal" aria-label="YouTube" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+            <a href="https://www.facebook.com/shrijeta/" aria-label="Facebook" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/></svg></a>
+            <a href="https://twitter.com/shrijeta" aria-label="Twitter" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.299 1.634 4.209 3.805 4.649-.625.17-1.288.21-1.96.075.594 1.88 2.308 3.256 4.34 3.294-1.746 1.371-3.942 2.19-6.326 2.19-.41 0-.814-.024-1.21-.073 2.252 1.454 4.933 2.302 7.818 2.302 9.375 0 14.5-7.764 14.5-14.5 0-.221 0-.442-.015-.662.994-.717 1.85-1.616 2.532-2.624z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Shrijeta Global. All rights reserved. | <a href="/privacy" style="color: #a0aec0;">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 💡 LIGHT JS (deferred, <50KB) -->
+  <script defer>
+    // INTERACTIVE SELECTOR TABS
+    document.querySelectorAll('.selector-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Deactivate all tabs
+        document.querySelectorAll('.selector-tab').forEach(t => t.classList.remove('active'));
+        // Hide all grid wrappers
+        document.querySelectorAll('.machine-grid-wrapper').forEach(grid => {
+          grid.style.display = 'none';
+        });
+
+        // Activate the clicked tab
+        tab.classList.add('active');
+        // Show the target grid
+        const target = tab.dataset.target;
+        if (target) {
+          document.querySelector(target).style.display = 'block';
+        }
+      });
+    });
+
+    // FAQ TOGGLE
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Generate FAQ Schema from HTML
+    const faqItems = [];
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-question').innerText.replace('+', '').trim();
+      const a = item.querySelector('.faq-answer').innerText.trim();
+      faqItems.push({
+        "@type": "Question",
+        "name": q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": a
+        }
+      });
+    });
+
+    document.getElementById('faq-schema').textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqItems
+    });
+
+    // Sticky header enhancement
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+      } else {
+        header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
+      }
+    });
+  </script>
 </body>
 </html>

@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="High-speed, low-maintenance automatic packaging machines for powders, granules, liquids & snacks. Export-ready since 2015. Get a quote today."/>
-  <title>Shrijeta Global — Industrial Packaging Machines Manufacturer</title>
+  <meta name="description" content="Explore our full range of high-performance packaging machines. We offer solutions for powders, liquids, granules, and more, in various pouch and carton formats."/>
+  <title>Our Packaging Machines — Shrijeta Global</title>
 
   <!-- Favicon: Inline SVG -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230d3b5c'/><text x='50' y='65' font-size='60' fill='white' text-anchor='middle'>S</text></svg>">
 
-  <!-- Preconnect & Preload -->
+  <!-- Preconnect to CDN -->
   <link rel="preconnect" href="https://cdn.shrijeta.com" crossorigin>
-  <link rel="preload" as="image" href="https://cdn.shrijeta.com/hero-machine.webp" imagesrcset="https://cdn.shrijeta.com/hero-machine-480.webp 480w, https://cdn.shrijeta.com/hero-machine-800.webp 800w, https://cdn.shrijeta.com/hero-machine-1200.webp 1200w" imagesizes="100vw">
-  <link rel="preload" as="style" href="critical.css" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Meta + Schema -->
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://shrijeta.com/">
+  <link rel="canonical" href="https://shrijeta.com/machines.html">
 
   <!-- Structured Data: Organization + FAQPage -->
   <script type="application/ld+json">
@@ -119,6 +117,107 @@
     }
     .header-phone:hover {
       color: var(--accent);
+    }
+
+    /* 🖼️ PAGE HEADER (for inner pages) */
+    .page-header {
+      background: var(--gray);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .page-header h1 {
+      color: var(--primary);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    @media (min-width: 992px) {
+      .about-grid {
+        grid-template-columns: 3fr 1fr;
+      }
+    }
+    .about-main-content h2 {
+      margin-top: 2rem;
+    }
+    .about-main-content h2:first-child {
+      margin-top: 0;
+    }
+    .about-main-content ul {
+      list-style-position: inside;
+      padding-left: 1rem;
+    }
+    .about-main-content ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* 📞 CONTACT PAGE */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+    @media (min-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    .contact-form-wrapper h2, .contact-details-wrapper h2 {
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(13, 59, 92, 0.2);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-details-wrapper .content-box {
+        background: var(--gray); /* Use the lighter gray for contrast */
+    }
+    .contact-info-group {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+    .contact-info-group svg {
+        width: 24px;
+        height: 24px;
+        color: var(--primary);
+        flex-shrink: 0;
+        margin-top: 4px;
+    }
+    .contact-map {
+        margin-top: 2rem;
+        border-radius: var(--radius);
+        overflow: hidden;
     }
 
     /* 🖼️ HERO */
@@ -383,263 +482,76 @@
     </div>
   </header>
 
-  <!-- 🖼️ HERO -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>High-Speed, Low-Maintenance Packaging Machines</h1>
-      <p>Export-ready since 2015. Trusted by FMCG, Pharma & Food brands across Asia, Africa & Middle East.</p>
-      <div class="hero-cta-group">
-        <a href="/contact" class="btn">Get a Quote</a>
-        <a href="/brochure.pdf" class="btn btn-secondary">Download Brochure</a>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Our Packaging Machines</h1>
+        <p>High-performance, reliable, and low-maintenance solutions for every packaging need.</p>
       </div>
-    </div>
-    <img
-      src="https://cdn.shrijeta.com/hero-machine-480.webp"
-      srcset="https://cdn.shrijeta.com/hero-machine-480.webp 480w, https://cdn.shrijeta.com/hero-machine-800.webp 800w, https://cdn.shrijeta.com/hero-machine-1200.webp 1200w"
-      sizes="100vw"
-      alt="Shrijeta Automatic Pouch Packaging Machine in action"
-      loading="eager"
-      decoding="async"
-      width="1200"
-      height="675"
-      class="hero-image"
-    >
-  </section>
+    </section>
 
-  <!-- 🔍 WORKING SELECTOR -->
-  <section class="selector">
-    <div class="container">
-      <h2>Find Your Perfect Machine</h2>
-      <div class="selector-tabs">
-        <div class="selector-tab active" data-target="#grid-by-material">By Material</div>
-        <div class="selector-tab" data-target="#grid-by-pouch">By Pouch Type</div>
-        <div class="selector-tab" data-target="#grid-by-machine">By Machine</div>
-      </div>
+    <section style="padding: 4rem 0;">
+      <div class="container">
+        <div class="machine-grid">
 
-      <div class="selector-content">
-        <!-- Grid 1: By Material -->
-        <div id="grid-by-material" class="machine-grid-wrapper">
-          <div class="machine-grid">
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=Powder" alt="Powder Packing Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>Powder</h3><p class="spec">For spices, flours, detergents...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
-            </div>
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=Liquid+%26+Paste" alt="Liquid Packing Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>Liquid & Paste</h3><p class="spec">For sauces, oils, shampoo...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
-            </div>
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=Granules" alt="Granules Packing Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>Granules</h3><p class="spec">For pulses, seeds, tea, sugar...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
-            </div>
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=Snacks" alt="Snacks Packing Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>Snacks</h3><p class="spec">For chips, nuts, dry fruits...</p><a href="#" class="btn btn-secondary">View Machines</a></div>
+          <div class="machine-card">
+            <a href="#"><img src="https://via.placeholder.com/400x300.webp?text=Pouch+Packaging" alt="Pouch Packaging Machines" loading="lazy"></a>
+            <div class="content">
+              <h3>Pouch Packaging Machines</h3>
+              <p>Versatile machines for creating center seal, 3/4 side seal, and gusseted pouches.</p>
+              <a href="#" class="btn btn-secondary">View Models</a>
             </div>
           </div>
-        </div>
 
-        <!-- Grid 2: By Pouch Type (Hidden) -->
-        <div id="grid-by-pouch" class="machine-grid-wrapper" style="display: none;">
-          <div class="machine-grid">
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=Center+Seal" alt="Center Seal Pouch Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>Center Seal Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
-            </div>
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=3-4+Side+Seal" alt="3/4 Side Seal Pouch Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>3/4 Side Seal Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
-            </div>
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=Gusseted+Pouch" alt="Gusseted Pouch Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>Gusseted Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
-            </div>
-            <div class="machine-card">
-              <img src="https://via.placeholder.com/300x225.webp?text=Zipper+Pouch" alt="Zipper Pouch Machine" loading="lazy" decoding="async">
-              <div class="content"><h3>Zipper Pouch</h3><a href="#" class="btn btn-secondary">View Machines</a></div>
+          <div class="machine-card">
+            <a href="#"><img src="https://via.placeholder.com/400x300.webp?text=Lined+Carton" alt="Lined Carton Machines" loading="lazy"></a>
+            <div class="content">
+              <h3>Lined Carton Machines</h3>
+              <p>Automated systems for creating high-quality carton boxes with an inner foil lining.</p>
+              <a href="#" class="btn btn-secondary">View Models</a>
             </div>
           </div>
-        </div>
 
-        <!-- Grid 3: By Machine (Hidden) -->
-        <div id="grid-by-machine" class="machine-grid-wrapper" style="display: none;">
-           <div class="machine-grid">
-             <div class="machine-card">
-                <img src="https://via.placeholder.com/300x225.webp?text=Collar+Type" alt="Collar Type Machine" loading="lazy" decoding="async">
-                <div class="content"><h3>Collar Type FFS</h3><a href="#" class="btn btn-secondary">View Details</a></div>
-             </div>
-             <div class="machine-card">
-                <img src="https://via.placeholder.com/300x225.webp?text=Multi-Track" alt="Multi-Track Machine" loading="lazy" decoding="async">
-                <div class="content"><h3>Multi-Track FFS</h3><a href="#" class="btn btn-secondary">View Details</a></div>
-             </div>
-             <div class="machine-card">
-                <img src="https://via.placeholder.com/300x225.webp?text=Lined+Carton" alt="Lined Carton Machine" loading="lazy" decoding="async">
-                <div class="content"><h3>Lined Carton</h3><a href="#" class="btn btn-secondary">View Details</a></div>
-             </div>
-             <div class="machine-card">
-                <img src="https://via.placeholder.com/300x225.webp?text=Flow+Wrap" alt="Flow Wrap Machine" loading="lazy" decoding="async">
-                <div class="content"><h3>Flow Wrap</h3><a href="#" class="btn btn-secondary">View Details</a></div>
-             </div>
-           </div>
+          <div class="machine-card">
+            <a href="#"><img src="https://via.placeholder.com/400x300.webp?text=Collar+Type+FFS" alt="Collar Type FFS Machines" loading="lazy"></a>
+            <div class="content">
+              <h3>Collar Type FFS Machines</h3>
+              <p>High-speed form, fill, and seal machines, compatible with various fillers.</p>
+              <a href="#" class="btn btn-secondary">View Models</a>
+            </div>
+          </div>
+
+          <div class="machine-card">
+            <a href="#"><img src="https://via.placeholder.com/400x300.webp?text=Multi-Track+Machines" alt="Multi-Track Machines" loading="lazy"></a>
+            <div class="content">
+              <h3>Multi-Track Machines</h3>
+              <p>For high-production requirements, creating multiple sachets simultaneously.</p>
+              <a href="#" class="btn btn-secondary">View Models</a>
+            </div>
+          </div>
+
+          <div class="machine-card">
+            <a href="#"><img src="https://via.placeholder.com/400x300.webp?text=Flow+Wrap" alt="Horizontal Flow Wrap Machines" loading="lazy"></a>
+            <div class="content">
+              <h3>Horizontal Flow Wrap</h3>
+              <p>Ideal for packaging solid items like biscuits, soaps, and other single-unit products.</p>
+              <a href="#" class="btn btn-secondary">View Models</a>
+            </div>
+          </div>
+
+          <div class="machine-card">
+            <a href="#"><img src="https://via.placeholder.com/400x300.webp?text=Weighing+Systems" alt="Weighing Systems" loading="lazy"></a>
+            <div class="content">
+              <h3>Weighing & Filling Systems</h3>
+              <p>High-accuracy multihead and linear weighers to integrate with your packing line.</p>
+              <a href="#" class="btn btn-secondary">View Models</a>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- 🖼️ MACHINE GALLERY PREVIEW -->
-  <section class="machine-preview">
-    <div class="container">
-      <h2>Featured Machines</h2>
-      <div class="machine-grid">
-        <!-- REPLACE WITH YOUR OWN IMAGES & LINKS -->
-        <div class="machine-card">
-          <img src="https://cdn.shrijeta.com/machine1-thumb.webp" alt="Powder Packing Machine" loading="lazy" decoding="async">
-          <div class="content">
-            <h3>Powder Pouch Packing</h3>
-            <div class="spec">80 PPM | ±0.3% | Center Seal</div>
-            <a href="/machines/powder-pouch" class="btn btn-secondary">View Machine</a>
-          </div>
-        </div>
-        <div class="machine-card">
-          <img src="https://cdn.shrijeta.com/machine2-thumb.webp" alt="Liquid FFS Machine" loading="lazy" decoding="async">
-          <div class="content">
-            <h3>Liquid FFS System</h3>
-            <div class="spec">60 PPM | Servo Dosing | Spout</div>
-            <a href="/machines/liquid-ffs" class="btn btn-secondary">View Machine</a>
-          </div>
-        </div>
-        <div class="machine-card">
-          <img src="https://cdn.shrijeta.com/machine3-thumb.webp" alt="Multihead Weigher + Pouch" loading="lazy" decoding="async">
-          <div class="content">
-            <h3>Multihead + Pouch</h3>
-            <div class="spec">100 PPM | 14-Head | Zipper</div>
-            <a href="/machines/multihead-pouch" class="btn btn-secondary">View Machine</a>
-          </div>
-        </div>
-        <div class="machine-card">
-          <img src="https://cdn.shrijeta.com/machine4-thumb.webp" alt="Carton Packaging" loading="lazy" decoding="async">
-          <div class="content">
-            <h3>Lined Carton System</h3>
-            <div class="spec">40 Boxes/Min | In-line Foil</div>
-            <a href="/machines/lined-carton" class="btn btn-secondary">View Machine</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🌟 Why Choose Shrijeta? -->
-  <section class="content-areas">
-    <div class="container">
-      <h2>Why Choose Shrijeta?</h2>
-      <div class="content-grid">
-        <div class="content-box">
-          <h3>🏢 Your Trusted Partner Since 2015</h3>
-          <p>Based in Faridabad, India, we are a leading manufacturer and exporter of industrial packaging machines. We are known for modern design, high performance, and competitive pricing.</p>
-        </div>
-        <div class="content-box">
-          <h3>⚙️ High-Performance Technology</h3>
-          <p>Our machinery is crafted with high-quality materials and the latest technology, including Lined Carton Machines, Collar Type FFS, Multi-Track Machines, and Multihead Weigher systems.</p>
-        </div>
-        <div class="content-box">
-          <h3>🌍 Global Reach & Support</h3>
-          <p>We proudly serve valuable customers across the globe, including Nepal, Bangladesh, Sri Lanka, UAE, Egypt, Nigeria, and other countries in Asia, Africa, and the Middle East.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 💬 TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="container">
-      <h2>Trusted by Industry Leaders</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <p class="testimonial-text">“Shrijeta’s powder packing machine reduced our giveaway by 2.1% — saving us ₹18 lakhs/year. Their service team is always on call.”</p>
-          <p class="testimonial-author">— Rajesh Mehta, Production Head, SpiceCraft India</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">“Installed in Dubai with zero downtime. Training was thorough. Now running 18 hours/day without issue.”</p>
-          <p class="testimonial-author">— Fatima Al-Mansoori, Plant Manager, GulfPack UAE</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">“Switched from European brand to Shrijeta. Same performance, 40% lower cost, faster local support.”</p>
-          <p class="testimonial-author">— Anjali Bose, Director, NutriSnacks Bangladesh</p>
-        </div>
-      </div>
-
-      <div class="client-logos">
-        <!-- REPLACE WITH YOUR CLIENT LOGOS -->
-        <img src="https://via.placeholder.com/120x50?text=Client+A" alt="Client A" class="client-logo" loading="lazy">
-        <img src="https://via.placeholder.com/120x50?text=Client+B" alt="Client B" class="client-logo" loading="lazy">
-        <img src="https://via.placeholder.com/120x50?text=Client+C" alt="Client C" class="client-logo" loading="lazy">
-        <img src="https://via.placeholder.com/120x50?text=Client+D" alt="Client D" class="client-logo" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- ❓ FAQ -->
-  <section class="faq">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list" id="faq-list">
-        <div class="faq-item">
-          <div class="faq-question">What materials can your machines pack? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">
-            <p>We handle powders (free & non-free flowing), granules, liquids, pastes, snacks, dry fruits, and more. Machines are configurable with auger, servo piston, or multihead/linear weigher dosing.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Do you provide installation and training? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">
-            <p>Yes. Our engineers travel to your site for machine installation, calibration, and operator training. We also provide video manuals and 24/7 WhatsApp support.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">What is the warranty period? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">
-            <p>All machines come with 18 months warranty on mechanical parts and 12 months on electrical components. Extended warranty and AMC plans available.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Can you customize machines for my product? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">
-            <p>Absolutely. We’ve customized fillers for turmeric, protein powder, honey, ghee, detergent, and even chili flakes. Share your sample — we’ll test and recommend the best solution.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 📍 LOCATION MAP -->
-  <section class="location">
-    <div class="container">
-      <h2>Our Location</h2>
-      <p>Visit our manufacturing facility in Faridabad, Haryana — just 45 minutes from Delhi Airport.</p>
-      <div class="map-container">
-        <!-- STATIC MAP IMAGE — NO JS, NO GOOGLE API -->
-        <img
-          src="https://cdn.shrijeta.com/factory-map.webp"
-          alt="Shrijeta Global Factory Location Map — Faridabad, Haryana, India"
-          loading="lazy"
-          decoding="async"
-          width="1200"
-          height="675"
-          style="width:100%; height:auto;"
-        >
-      </div>
-      <a href="/contact" class="btn">Schedule a Factory Visit</a>
-    </div>
-  </section>
-
-  <!-- 📞 CONTACT CTA -->
-  <section class="contact-cta">
-    <div class="container">
-      <h2>Ready to Automate Your Packaging?</h2>
-      <p>Get a custom quote, machine recommendation, or technical consultation today.</p>
-      <a href="/contact" class="btn">Talk to an Expert</a>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- 📜 FOOTER -->
   <footer>
@@ -668,7 +580,7 @@
             <li><a href="service.html">Service & Installation</a></li>
             <li><a href="service.html">Spare Parts</a></li>
             <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="#faq-list">FAQ</a></li>
+            <li><a href="index.html#faq-list">FAQ</a></li>
           </ul>
         </div>
         <div>
